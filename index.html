@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(location.search);
+      const file = params.get('p');
+      const jsFileName = file ? `${file}.js` : 'main.js';
+
+      const info = document.createElement('p');
+      info.textContent = `${jsFileName}임둥 😎`;
+      document.body.appendChild(info);
+
+      const script = document.createElement('script');
+      script.src = `./js/${jsFileName}`;
+      script.defer = true;
+      document.body.appendChild(script);
+    });
+  </script>
+
+  <title>알고리즈음</title>
+</head>
+<body>
+  <h2>js-algorithms</h2>
+</body>
+</html>
