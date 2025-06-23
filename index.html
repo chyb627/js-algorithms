@@ -8,7 +8,7 @@
     window.addEventListener('DOMContentLoaded', () => {
       const params = new URLSearchParams(location.search);
       const file = params.get('p');
-      const jsFileName = file ? `${file}.js` : 'main.js';
+      const jsFileName = file ? `${file}.js` : 'algorithm.js';
 
       const info = document.createElement('p');
       info.textContent = `${jsFileName}임둥 😎`;
@@ -21,9 +21,15 @@
     });
   </script>
 
+  <!-- <script defer src="./js/algorithm.js"></script> -->
   <title>알고리즈음</title>
 </head>
 <body>
   <h2>js-algorithms</h2>
+
+  <div class="parent">
+    <div class="child" id="child">1</div>텍스트1
+    <div class="child">2</div>텍스트2
+  </div>
 </body>
 </html>
